@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+
+body, html{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Karla', sans-serif;
+  background-color: beige;
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#drum-machine{
+  background-color: white;
+  width: 40vw;
+  height: 20vw;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+

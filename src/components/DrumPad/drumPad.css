@@ -1,0 +1,15 @@
+.drum-pad-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:1rem;
+}
+.drum-pad{
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: grey 2px 2px 4px;
+    border-radius: 5px;
+}
+
