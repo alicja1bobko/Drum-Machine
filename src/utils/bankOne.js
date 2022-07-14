@@ -8,14 +8,12 @@ export const bankOne = [
   {
     letterTrigger: "W",
     code: "KeyW",
-    keyCode: 87,
     id: "Heater-2",
     url: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3",
   },
   {
     letterTrigger: "E",
     code: "KeyE",
-    keyCode: 69,
     id: "Heater-3",
     url: "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
   },

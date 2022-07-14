@@ -30,3 +30,63 @@ code {
   grid-template-rows: 1fr;
 }
 
+
+/* slider */
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  /* text-indent: -9999px; */
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 3px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top:2px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: lightcoral;
+}
+
+input:checked + label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+
+/* label:active:after {
+  width: 30px;
+} */
+
+
+.control{
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+.description{
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
