@@ -11,5 +11,19 @@
     justify-content: center;
     box-shadow: grey 2px 2px 4px;
     border-radius: 5px;
+    cursor: pointer;
 }
+
+.drum-pad:active{
+    background-color: blue;
+}
+
+.drum-pad:focus{
+    outline: none;
+}
+
+.active{
+    background-color: blue;
+}
+
 

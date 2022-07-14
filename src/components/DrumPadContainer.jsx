@@ -5,6 +5,7 @@ import { bankOne } from "../utils/bankOne";
 export default class DrumPadContainer extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       padStateStyle: "",
     };
@@ -15,8 +16,9 @@ export default class DrumPadContainer extends Component {
         <DrumPad
           letterTrigger={padsArray[i].letterTrigger}
           key={padsArray[i].letterTrigger}
-          padId={padsArray[i].id}
+          padId={padsArray[i].code}
           sound={padsArray[i].url}
+          code={padsArray[i].code}
         />
       );
     });
