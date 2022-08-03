@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import "./drumPad.css";
 
 
-
 export default class DrumPad extends Component {
   constructor(props) {
     super(props);
@@ -33,6 +32,7 @@ export default class DrumPad extends Component {
   }
 
   handleKeyPress(e) {
+    this.onKeyDown(e);
     if (e.code === this.props.code) {
       this._reactInternals.child.stateNode.focus(); //onkeydown works on the first run (requires focus on element)
       this.playSound();
@@ -45,7 +45,7 @@ export default class DrumPad extends Component {
     if (this.props.power) {
       audio.play();
     }
-    
+    this.props.passPadName(this.props.padname);
   }
 
   render() {

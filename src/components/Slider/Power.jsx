@@ -10,7 +10,7 @@ export default class Power extends Component {
   render() {
     return (
       <>
-        <div className="control">
+        <div className="control center power">
           <p className="description">Power</p>
           <input
             type="checkbox"

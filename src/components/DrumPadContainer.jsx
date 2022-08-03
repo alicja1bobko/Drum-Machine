@@ -1,25 +1,32 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from "react";
 import DrumPad from "./DrumPad/DrumPad";
-import { bankOne } from "../utils/bankOne";
+import PropTypes from "prop-types";
 
 export default class DrumPadContainer extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
-    let drumPads = bankOne.map((drumObj, i, padsArray) => {
+    const { handleDisplayer, currentPadBank } = this.props;
+    let drumPads = currentPadBank.map((drumObj, i, padsArray) => {
       return (
         <DrumPad
           power={this.props.power}
           letterTrigger={padsArray[i].letterTrigger}
           key={padsArray[i].letterTrigger}
-          padId={padsArray[i].code}
+          padname={padsArray[i].id}
           sound={padsArray[i].url}
           code={padsArray[i].code}
+          passPadName={(name) => handleDisplayer(name)}
         />
       );
     });
     return <div className="drum-pad-container">{drumPads}</div>;
   }
 }
+
+DrumPadContainer.propTypes = {
+  power: PropTypes.bool.isRequired,
+};
