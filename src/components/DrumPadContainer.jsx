@@ -9,7 +9,7 @@ export default class DrumPadContainer extends Component {
   }
 
   render() {
-    const { handleDisplayer, currentPadBank } = this.props;
+    const { handleDisplayer, currentPadBank, volume } = this.props;
     let drumPads = currentPadBank.map((drumObj, i, padsArray) => {
       return (
         <DrumPad
@@ -20,6 +20,7 @@ export default class DrumPadContainer extends Component {
           sound={padsArray[i].url}
           code={padsArray[i].code}
           passPadName={(name) => handleDisplayer(name)}
+          volume={volume}
         />
       );
     });

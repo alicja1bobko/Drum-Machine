@@ -42,6 +42,8 @@ export default class DrumPad extends Component {
   playSound() {
     var audio = document.getElementById(this.props.letterTrigger);
     audio.currentTime = 0;
+    audio.volume = this.props.volume;
+   
     if (this.props.power) {
       audio.play();
     }

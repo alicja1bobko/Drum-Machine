@@ -5,17 +5,18 @@
     gap:1rem;
 }
 .drum-pad{
-    background-color: lightcoral;
+    background-color: var(--first-color);
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: grey 2px 2px 4px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .drum-pad:active{
-    background-color: blue;
+    background-color:  var(--fifth-color);
 }
 
 .drum-pad:focus{
@@ -23,7 +24,7 @@
 }
 
 .active{
-    background-color: blue;
+    background-color: var(--fifth-color);
 }
 
 

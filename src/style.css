@@ -2,11 +2,24 @@
   box-sizing: border-box;
 }
 
+:root{
+  --first-color:#E0AFA0;
+  --second-color: #BCB8B1;
+  --third-color: #F4F3EE;
+  --fourth-color: #8A817C;
+  --fifth-color: #8A817C;
+  /* --first-color: #BCD39C;
+  --second-color: #FFFC99;
+  --third-color: #EAFDCF;
+  --fourth-color: #8E8358;
+  --fifth-color: #8E8358; */
+}
+
 body, html{
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'Karla', sans-serif;
-  background-color: beige;
+  background-color: var(--second-color);
   height: 100%;
 }
 
@@ -20,37 +33,43 @@ code {
     monospace;
 }
 
+
+
 #drum-machine{
-  background-color: white;
-  width: 40vw;
-  height: 20vw;
+  background-color: var(--third-color);
+  width: 60vw;
+  height: 60vh;
   display: grid;
-  padding: 1rem;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
 
-/* slider  power*/
+
+/* slider  power,*/
  input[type=checkbox]{
   height: 0;
   width: 0;
   visibility: hidden;
 }
 
-label {
+.power, .bank, label {
   cursor: pointer;
-  /* text-indent: -9999px; */
-  width: 50px;
-  height: 26px;
-  background: grey;
+  width: 3rem;
+  height: 1.6rem;
   display: block;
   border-radius: 3px;
   position: relative;
 }
 
+.power label {
+   background: var(--fourth-color);;
+}
+
 .bank label {
-  background-color: lightcoral;
+  background-color: var(--first-color);
 }
 
 label:after {
@@ -58,15 +77,15 @@ label:after {
   position: absolute;
   top:3px;
   left: 3px;
-  width: 20px;
-  height: 20px;
-  background: #fff;
+  width: 1.3rem;
+  height: 1.25rem;
+  background: var(--third-color);;
   border-radius: 3px;
   transition: 0.3s;
 }
 
  input:checked + label {
-  background: lightcoral;
+  background: var(--first-color);
 }
 
  input:checked + label:after {
@@ -78,14 +97,24 @@ label:after {
   width: 30px;
 } */
 
+.bank {
+  margin-bottom: auto;
+}
+.power{
+  margin-bottom: auto;
+}
 
-
+/*volume*/
+.volume{
+  width: 70%;
+}
 
 .controls-panel{
   padding-left: 1rem;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 1fr;
+  gap:-10px;
 }
 
 .center{
@@ -99,9 +128,8 @@ label:after {
 .description{
   margin: 0;
   padding: 0;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: bold;
-
 }
 
 #display{
@@ -110,8 +138,12 @@ label:after {
   justify-content: center;
   margin: 0;
   padding: 0.5rem;
-  background-color: lightcoral;
+  border-radius: 0.2rem;
+  background-color: var(--first-color);
   width: 70%;
-  font-weight: 500;
+  font-weight: bolder;
+  font-size: 0.9em;
 }
+
+
 

@@ -11,8 +11,7 @@ export default class Bank extends Component {
     this.toggleCheck = this.toggleCheck.bind(this);
   }
 
-  toggleCheck(e) {
-    console.log(e.target.disabled);
+  toggleCheck() {
     if (this.props.power === true) {
       if (this.props.currentPadBankId === "Heater Kit") {
         this.setState({
